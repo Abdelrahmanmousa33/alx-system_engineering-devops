@@ -12,5 +12,5 @@ do
 		(( min++ ))
 	done
 	(( i++ ))
-	min=$((0))
+	min=$((1))
 done
