@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #changes ssh confugration file 
+include stdlib
 file { '/etc/ssh/ssh_config':
   ensure => present,
 }
@@ -13,5 +14,5 @@ file_line { 'turn off password auth':
 file_line { 'change identity file':
   path  => '/etc/ssh/ssh_config',
   line  => '#   IdentityFile ~/.ssh/school',
-  match => '#   IdentityFile',
+  match => '#   IdentityFile ~/.ssh/id_rsa',
 }
