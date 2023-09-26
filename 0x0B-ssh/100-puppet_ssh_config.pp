@@ -1,4 +1,5 @@
 #changes ssh confugration file 
+include stdlib
 file { '/etc/ssh/ssh_config':
   ensure => present,
 }
