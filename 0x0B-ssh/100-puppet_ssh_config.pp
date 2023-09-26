@@ -1,10 +1,14 @@
 #changes ssh confugration file 
+file { '/etc/ssh/ssh_config:
+  ensure => 'present',
+}
 
 file_line { '/etc/ssh/ssh_config':
-  line  => '#   PasswordAuthentication yes',
-  match => '#   PasswordAuthentication no',
+  line  => '#   PasswordAuthentication no',
+  match => '#   PasswordAuthentication',
 }
+
 file_line { 'etc/ssh/ssh_config':
   line  => '#   IdentityFile ~/.ssh/school',
-  match => '#   IdentityFile ~/.ssh/school',
+  match => '#   IdentityFile',
 }
