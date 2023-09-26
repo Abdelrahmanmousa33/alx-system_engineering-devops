@@ -1,9 +1,9 @@
 #changes ssh confugration file 
-file { '/etc/ssh/ssh_config:
-  ensure => 'present',
+file { '/etc/ssh/ssh_config':
+  ensure => present,
 }
 
-file_line { '/etc/ssh/ssh_config':
+file_line { 'turn off password auth':
   line  => '#   PasswordAuthentication no',
   match => '#   PasswordAuthentication',
 }
