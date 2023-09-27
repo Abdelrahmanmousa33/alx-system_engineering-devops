@@ -11,6 +11,6 @@ sudo sed -i "s|listen \[::\]:80 default_server;|listen \[::\]:80 default_server;
 	error_page 404 /not_found.html;\
 	location = /not_found.html {\
 	root /var/www/html;\
-		internal;\	
+		internal;\
         }|" "/etc/nginx/sites-enabled/default"
 sudo service nginx restart
