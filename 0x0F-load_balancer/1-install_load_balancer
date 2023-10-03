@@ -2,7 +2,7 @@
 #script that configure new load balancer
 
 apt-get update
-apt-get install -y 
+apt-get install haproxy -y 
 
 options="\tbind *:80\n\tbalance roundrobin"
 servers="\tserver 264110-web-02 34.202.157.214 check
